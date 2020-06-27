@@ -21,10 +21,12 @@ vertical-align: baseline;
 }
 /*BREAKPIONTS*/
 @media(max-width: 800px) {
-    background-color: black;
+    body{
+    background-color: black;}
 }
 @media(max-width: 500px) {
-    background-color: black;
+    body {
+    background-color: black;}
 }
 
 /*GENERAL STYLES*/
