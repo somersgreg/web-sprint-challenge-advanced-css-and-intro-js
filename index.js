@@ -282,10 +282,10 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) 
 
 At the end, this function should return the new array with information added"*/
-
+console.log(`:   :  : ::: TASK 6 ::: :  :   :`);
 function addArtist(array,id,name,years,genre,nationality,bio){
     array.push({id,name,years,genre,nationality,bio});
-    console.log(array);
+    console.log(array[19]); // Shouldnt this be 20?  
   }
   addArtist(artists,21,'Gregory Somers','1971 - ???','Web Design','United States','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus felis non turpis posuere, et viverra tortor rhoncus.');
 
@@ -296,13 +296,16 @@ function addArtist(array,id,name,years,genre,nationality,bio){
 and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
-
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
+console.log(`:   :  : ::: TASK 7 ::: :  :   :`);
+function lotsOfArt(array){
+  topPainters = []; // Declare a new array.
+  for (let i = 0; i < array.length -1; i++) { // Loop through array (artists).
+  if (array[i].paintings > 100) { // Find i for where .paintings is > 100.
+  topPainters.push(array[i].name)} // Push i to new array but just the name. Close if.
+  } // Close for.
+  return topPainters; // return new array.
 }
-
+console.log(lotsOfArt(artists));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
