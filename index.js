@@ -283,11 +283,11 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist(array,id,name,years,genre,nationality,bio){
+    array.push({id,name,years,genre,nationality,bio});
+    console.log(array);
   }
+  addArtist(artists,21,'Gregory Somers','1971 - ???','Web Design','United States','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus felis non turpis posuere, et viverra tortor rhoncus.');
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
