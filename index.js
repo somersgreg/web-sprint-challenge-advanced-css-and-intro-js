@@ -204,16 +204,17 @@ const artists = [
 // 🖌🖼 M V P 🖼🖌 //
 
 /* Task 1: Practice accessing data above by console.log-ing following items:
-
 // (1) Name of the first artist (0th index) in the array*/
 // console.log (artists[0])
 // console.log (artists.name[0])
+console.log(`:   :  : ::: TASK 1 ::: :  :   :`);
 console.log (artists[0].name);
 
 // // (2) Bio of the third artist (2nd index) in the array */
 // console.log (artists[2].bio);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
+console.log(`:   :  : ::: TASK 2 ::: :  :   :`);
 console.log(artists[8].name="Vincent Van Gogh");
 console.log(artists[8])
 // I DIDNT KNOW THE THING IN () OF A CONSOLE.LOG IS ACTIVELY HAPPENING.
@@ -226,6 +227,7 @@ console.log(artists[8])
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
+console.log(`:   :  : ::: TASK 3 ::: :  :   :`);
 function getArtistByIndex(array, index) {
   return `The artist at index ${index} is ${array[index].name}`
 }
@@ -233,12 +235,19 @@ console.log(getArtistByIndex(artists,0))
 // ARRAY, INDEX ARE PARAMETERS UNTIL YOU CALL THEM. THEN THEY ARE ARGUMENTS.
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
+console.log(`:   :  : ::: TASK 4 ::: :  :   :`);
 
-function get20s(/* Code here */){
-
-  /* Code here */
-
-}
+function get20s(array,minYear,maxYear){
+filteredList = [];   // declare new arr   // split and the number method  (Need to do right)
+for ( i = 0 ; i < array.length ; i = i + 1 ) {
+    if (array[i].years.includes(minYear) || array[i].years.includes(maxYear)) { // this is wrong because its not checking the century.
+      filteredList.push(array[i].name);
+    }
+  }
+  return filteredList;
+}      // If index.years 1(8)99 <9 && <2 then push to new array  // This was where i was wrong
+console.log(get20s(artists,19,20)); // CHECK IF BORN AND DIED (AFTER!!) BEFORE 2000 
+// I WAS READING THE TASK WRONG.  I STILL DONT HAVE THE BEST FIX.  NEED TO USE charAt(index) OR SPLIT / NUM METHODS
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -251,11 +260,15 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+console.log(`:   :  : ::: TASK 5 ::: :  :   :`);
+  function removeArtist(array,index) {
+    array.splice(index,1);
+    console.log(array[index]);
+    console.log(`The number of artists in the array after removeArtist: `);  // I CANT SIMPLY JOIN THIS TO THE NUMBER OUTPUT BELOW.
+    console.log(array.length);
   }
-  
- 
+  removeArtist(artists,0);
+// THIS IS REMOVING THE WRONG ARTIST??  I CANT FIGURE OUT HOW TO COMBINE A VARIABLE WITH A COMMENT IN CONSOLE.LOGS!!
 
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
