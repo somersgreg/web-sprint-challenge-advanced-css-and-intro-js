@@ -19,6 +19,16 @@ font-size: 100%;
 font: inherit;  
 vertical-align: baseline;  
 }
+/*BREAKPIONTS*/
+@media(max-width: 800px) {
+    body{
+    background-color: black;}
+}
+@media(max-width: 500px) {
+    body {
+    background-color: black;}
+}
+
 /*GENERAL STYLES*/
 html{
     font-size:62.5%;
